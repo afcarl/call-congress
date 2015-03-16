@@ -787,37 +787,75 @@
   msg_final_thanks: k thanks bye
   call_human_check: false
   fftf_log_extra_data: true
-  number_of_extra_first_calls: 3
+  number_of_extra_first_calls: 10
   extra_first_calls:
-    - C001076
-    - S001197
-    - J000293
-  number_of_extra_last_calls: 6
-  extra_last_calls:
-    - F000460
-    - C001103
-    - L000571
-    - P000609
-    - G000576
-    - J000289
-    - H001071
-    - D000533
-    - M000689
-    - A000367
-    - B001297
-    - M001187
-    - W000819
-    - T000463
-    - M001182
-    - G000565
-    - B001294
-    - D000621
-    - D000616
-    - R000604
-    - M001184
-    - W000798
-    - G000566
-    - H001073
+    # https://docs.google.com/a/levinger.net/spreadsheets/d/1Jsxllae2408fWPgnfLWvFU105jlgUTFtAgo4MTLokE0/edit#gid=0
+    # neg only, as of 3/13
+
+    # House Oversight Committee (emails/calls out starting 3/12)                                     
+    - A000367 # Rep Justin Amash, 202-225-3831
+    - B001294 # Rep Rod Blum, 202-225-2911
+    - B001297 # Rep Ken Buck, 202-225-4676
+    - C001076 # Rep Jason Chaffetz, 202-225-7751
+    - C001103 # Rep Buddy Carter, 202-225-5831
+    - D000533 # Rep John Duncan, 202-225-5435
+    - D000616 # Rep Scott DesJarlais, 202-225-6831
+    - D000621 # Rep Ron DeSantis, 202-225-2706
+    - F000460 # Rep Blake Farenthold, 202-225-7742
+    - G000565 # Rep Paul Gosar, 202-225-2315
+    - G000566 # Rep Trey Gowdy, 202-225-6030
+    - G000576 # Rep Glenn Grothman, 202-225-2476
+    - H001071 # Rep Jody Hice, 202-225-4101
+    - H001073 # Rep Will Hurd, 202-225-4511
+    - J000289 # Rep Jim Jordan, 202-225-2676
+    - L000571 # Rep Cynthia Lummis, 202-225-2311
+    - M000689 # Rep John Mica, 202-225-4035
+    - M001182 # Rep Mick Mulvaney, 202-225-5501
+    - M001184 # Rep Thomas Massie, 202-225-3465
+    - M001187 # Rep Mark Meadows, 202-225-6401
+    - P000609 # Rep Gary Palmer, 202-225-4921
+    - R000604 # Rep Steve Russell, 202-225-2132
+    - T000463 # Rep Michael Turner, 202-225-6465
+    - W000798 # Rep Tim Walberg, 202-225-6276
+    - W000819 # Rep Bradley Walker, 202-225-3065
+
+    # House Energy and Commerce Committee (emails/calls out starting 3/12)
+    - B001251 # Rep George Butterfield, 202-225-3101
+    - R000515 # Rep Bobby Rush, 202-225-4372
+
+    # House Appropriations Subcommittee on Financial Services and General Government (emails/calls out starting 3/16)
+    - A000369 # Rep Mark Amodei, 202-225-6155
+    - C001045 # Rep Ander Crenshaw, 202-225-2501
+    - G000560 # Rep Tom Graves, 202-225-5211
+    - H001056 # Rep Jaime Herrera Beutler, 202-225-3536
+    - R000589 # Rep Edward Rigell, 202-225-4215
+    - W000809 # Rep Steve Womack, 202-225-4301
+    - Y000063 # Rep Kevin Yoder, 202-225-2865
+
+    # House Judiciary Committee (emails/calls out starting 3/16)
+    - B001293 # Rep Mike Bishop, 202-225-4872
+    - B001297 # Rep Ken Buck, 202-225-4676
+    - C000266 # Rep Steve Chabot, 202-225-2216
+    - C001076 # Rep Jason Chaffetz, 202-225-7751
+    - C001093 # Rep Doug Collins, 202-225-9893
+    - D000621 # Rep Ron DeSantis, 202-225-2706
+    - F000445 # Rep J. Forbes, 202-225-6365
+    - F000448 # Rep Trent Franks, 202-225-4576
+    - F000460 # Rep Blake Farenthold, 202-225-7742
+    - G000289 # Rep Bob Goodlatte, 202-225-5431
+    - G000552 # Rep Louie Gohmert, 202-225-3035
+    - G000566 # Rep Trey Gowdy, 202-225-6030
+    - I000056 # Rep Darrell Issa, 202-225-3906
+    - J000289 # Rep Jim Jordan, 202-225-2676
+    - K000362 # Rep Steve King, 202-225-4426
+    - L000573 # Rep Raul Labrador, 202-225-6611
+    - M001179 # Rep Tom Marino, 202-225-3731
+    - P000592 # Rep Ted Poe, 202-225-6565
+    - R000601 # Rep John Ratcliffe, 202-225-6673
+    - S000244 # Rep F. Sensenbrenner, 202-225-5101
+    - S000583 # Rep Lamar Smith, 202-225-4236
+    - T000475 # Rep Dave Trott, 202-225-8171
+    - W000820 # Rep Mimi Walters, 202-225-5611
 
 - id: title-x-committees-pia
   numbers:
@@ -920,3 +958,20 @@
     - C001097   # Cardenas
     - B001251   # Butterfield
     - R000515   # Rush
+
+- id: housefasttrack
+  numbers:
+    - 650-716-1243
+  target_house: false
+  target_senate: true
+  target_house_first: false
+  repIds:
+    - P000197
+    - H000874
+  msg_intro: http://tfrce.s3.amazonaws.com/housefasttrack/msg_intro.mp3
+  msg_ask_zip: http://tfrce.s3.amazonaws.com/housefasttrack/msg_ask_zip.mp3
+  msg_invalid_zip: http://tfrce.s3.amazonaws.com/housefasttrack/msg_invalid_zip.mp3
+  msg_call_block_intro: http://tfrce.s3.amazonaws.com/housefasttrack/msg_call_block_intro.mp3
+  msg_rep_intro: Connecting you to {{name}}. Press star once you're done.
+  msg_between_thanks: http://tfrce.s3.amazonaws.com/housefasttrack/msg_between_thanks.mp3
+  msg_final_thanks: http://tfrce.s3.amazonaws.com/housefasttrack/msg_final_thanks.mp3
