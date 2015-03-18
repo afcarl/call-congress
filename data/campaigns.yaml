@@ -857,6 +857,20 @@
     - T000475 # Rep Dave Trott, 202-225-8171
     - W000820 # Rep Mimi Walters, 202-225-5611
 
+    - A000368 # Sen Kelly Ayotte, 202-224-3324
+    - B000575 # Sen Roy Blunt, 202-224-5721
+    - C001098 # Sen Ted Cruz, 202-224-5922
+    - D000618 # Sen Steve Daines, 202-224-2651
+    - F000463 # Sen Deb Fischer, 202-224-6551
+    - G000562 # Sen Cory Gardner, 202-224-5941
+    - H001041 # Sen Dean Heller, 202-224-6244
+    - J000293 # Sen Ron Johnson, 202-224-5323
+    - M000934 # Sen Jerry Moran, 202-224-6521
+    - R000595 # Sen Marco Rubio, 202-224-3041
+    - S001198 # Sen Dan Sullivan, 202-224-3004
+    - T000250 # Sen John Thune, 202-224-2321
+    - W000437 # Sen Roger Wicker, 202-224-6253
+
 - id: title-x-committees-pia
   numbers:
     - 650-716-1243
