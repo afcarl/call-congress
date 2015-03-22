@@ -434,7 +434,7 @@ def call_complete():
     if not params or not campaign:
         abort(404)
 
-    log_call(params, campaign, request)
+    # log_call(params, campaign, request)
 
     # If FFTF Leaderboard params are present, log this call
     if params['fftfCampaign'] and params['fftfReferer']:
