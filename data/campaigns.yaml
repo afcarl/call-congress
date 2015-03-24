@@ -796,7 +796,7 @@
   msg_final_thanks: k thanks bye
   call_human_check: false
   fftf_log_extra_data: true
-  number_of_extra_first_calls: 10
+  number_of_extra_first_calls: 5
   extra_first_calls:
     # https://docs.google.com/a/levinger.net/spreadsheets/d/1Jsxllae2408fWPgnfLWvFU105jlgUTFtAgo4MTLokE0/edit#gid=0
     # neg only, as of 3/13
