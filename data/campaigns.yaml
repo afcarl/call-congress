@@ -998,3 +998,42 @@
   msg_rep_intro: Connecting you to {{name}}. Press star once you're done.
   msg_between_thanks: http://tfrce.s3.amazonaws.com/housefasttrack/msg_between_thanks.mp3
   msg_final_thanks: http://tfrce.s3.amazonaws.com/housefasttrack/msg_final_thanks.mp3
+
+- id: stop-fast-track-senate
+  numbers: 
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  repIds:
+    - B001267 # Sen Michael Bennet, 202-224-5852
+    - B001288 # Sen Cory Booker, 202-224-3224
+    - C000127 # Sen Maria Cantwell, 202-224-3441
+    - C000141 # Sen Benjamin Cardin, 202-224-4524
+    - C001047 # Sen Shelley Capito, 202-224-6472
+    - G000555 # Sen Kirsten Gillibrand, 202-224-4451
+    - H001069 # Sen Heidi Heitkamp, 202-224-2043
+    - K000367 # Sen Amy Klobuchar, 202-224-3244
+    - K000383 # Sen Angus King, 202-224-5344
+    - L000577 # Sen Mike Lee, 202-224-5444
+    - M001170 # Sen Claire McCaskill, 202-224-6154
+    - P000449 # Sen Robert Portman, 202-224-3353
+    - P000603 # Sen Rand Paul, 202-224-4343
+    - S000148 # Sen Charles Schumer, 202-224-6542
+    - S001181 # Sen Jeanne Shaheen, 202-224-2841
+    - T000464 # Sen Jon Tester, 202-224-2644
+    - W000779 # Sen Ron Wyden, 202-224-5244
+  target_house: false
+  target_senate: false
+  skip_star_confirm: true
+  msg_intro: http://www.calloffthetpp.com/audio/msg_intro.mp3
+  msg_call_block_intro: http://www.calloffthetpp.com/audio/msg_call_block_intro.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_between_thanks: http://www.calloffthetpp.com/audio/msg_between_thanks.mp3
+  msg_final_thanks: Thank you. Goodbye!
