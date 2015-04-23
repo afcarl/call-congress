@@ -1091,9 +1091,16 @@
   call_human_check: false
   infinite_loop: false
   extra_first_calls:
-    - name: The FCC
-      number: 888-225-5322
+    - name: Rosenworcel
+      number: 202-418-2400
       intro: http://battleforthenet.s3.amazonaws.com/audio/merger_fcc_intro.mp3
+    - name: Clyburn
+      number: 202-418-0000
+      intro: http://battleforthenet.s3.amazonaws.com/audio/merger_fcc_intro.mp3
+    - name: Wheeler
+      number: 202-418-1000
+      intro: http://battleforthenet.s3.amazonaws.com/audio/merger_fcc_intro.mp3
+  number_of_extra_first_calls: 1
   extra_last_calls:
     - name: The White House
       number: 202-456-1414
