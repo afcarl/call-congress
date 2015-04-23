@@ -1037,3 +1037,31 @@
   msg_rep_intro: Now connecting you to {{name}}.
   msg_between_thanks: http://www.calloffthetpp.com/audio/msg_between_thanks.mp3
   msg_final_thanks: Thank you. Goodbye!
+
+- id: internet-vote
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: true
+  target_senate: false
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/iv_intro.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/iv_enter_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/iv_call_block_intro3.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  msg_final_thanks: Thanks for participating!
+  call_human_check: false
+  infinite_loop: false
+  extra_last_calls:
+    - name: Senator Ron Wyden
+      number: 202-224-5244
+      intro: http://battleforthenet.s3.amazonaws.com/audio/iv_wyden.mp3
