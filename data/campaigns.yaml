@@ -1059,6 +1059,7 @@
   msg_rep_intro: Now connecting you to {{name}}.
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   msg_final_thanks: Thanks for participating!
+  fftf_log_extra_data: true
   call_human_check: false
   infinite_loop: false
   extra_last_calls:
