@@ -1123,8 +1123,8 @@
   target_house_first: false
   fftf_log_extra_data: true
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/ifeelnaked_intro4.mp3
-  msg_ask_zip: http://tfrce.s3.amazonaws.com/housefasttrack/msg_ask_zip.mp3
-  msg_invalid_zip: http://tfrce.s3.amazonaws.com/housefasttrack/msg_invalid_zip.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
   msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/ifeelnaked_connecting2.mp3
   msg_rep_intro: Connecting you to {{name}}.
