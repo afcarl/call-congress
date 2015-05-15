@@ -1063,9 +1063,12 @@
   call_human_check: false
   infinite_loop: false
   extra_last_calls:
-    - name: Senator Ron Wyden
-      number: 202-224-5244
-      intro: http://battleforthenet.s3.amazonaws.com/audio/iv_wyden.mp3
+    - name: Nancy Pelosi
+      number: 202-225-4965
+      intro: http://battleforthenet.s3.amazonaws.com/audio/pelosi.mp3
+  number_of_extra_last_calls: 1
+  extra_last_call_name: Steny Hoyer
+  extra_last_call_num: 2022254131
 
 - id: kill-merger
   numbers:
@@ -1143,9 +1146,9 @@
     - 218-729-2044
     - 612-999-1433
     - 262-725-0171
-  target_house: false
-  target_senate: true
-  target_house_first: false
+  target_house: true
+  target_senate: false
+  target_house_first: true
   fftf_log_extra_data: true
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/tpp_intro.mp3
   msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/tpp_enter_zip.mp3
@@ -1155,3 +1158,10 @@
   msg_rep_intro: Connecting you to {{name}}.
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   msg_final_thanks: http://battleforthenet.s3.amazonaws.com/audio/tpp_outro.mp3
+  extra_last_calls:
+    - name: Nancy Pelosi
+      number: 202-225-4965
+      intro: http://battleforthenet.s3.amazonaws.com/audio/pelosi.mp3
+  number_of_extra_last_calls: 1
+  extra_last_call_name: Steny Hoyer
+  extra_last_call_num: 2022254131
