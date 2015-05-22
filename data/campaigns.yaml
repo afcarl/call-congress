@@ -1186,7 +1186,7 @@
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
   msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
   msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/patriot_connecting2.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/patriot_connecting.mp3
   msg_rep_intro: Connecting you to {{name}}.
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/patriot_between.mp3
   msg_final_thanks: http://battleforthenet.s3.amazonaws.com/audio/patriot_outro.mp3
