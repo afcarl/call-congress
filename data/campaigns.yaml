@@ -1198,4 +1198,7 @@
     - name: Rand Paul
       number: 202-224-4343
       intro: http://battleforthenet.s3.amazonaws.com/audio/patriot_paul.mp3
+    - name: Martin Heinrich
+      number: 202-224-5521
+      intro: http://battleforthenet.s3.amazonaws.com/audio/patriot_heinrich.mp3
   number_of_extra_last_calls: 1
