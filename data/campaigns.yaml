@@ -1215,7 +1215,7 @@
     - 218-729-2044
     - 612-999-1433
     - 262-725-0171
-  target_house: false
+  target_house: true
   target_senate: false
   target_house_first: false
   fftf_log_extra_data: true
@@ -1334,5 +1334,4 @@
       number: (202) 225-3452
     - name: Steven Palazzo
       number: (202) 225-5772
-
   number_of_extra_last_calls: 8
