@@ -1215,7 +1215,7 @@
     - 218-729-2044
     - 612-999-1433
     - 262-725-0171
-  target_house: true
+  target_house: false
   target_senate: false
   target_house_first: false
   fftf_log_extra_data: true
