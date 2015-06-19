@@ -1050,8 +1050,8 @@
     - 218-729-2044
     - 612-999-1433
     - 262-725-0171
-  target_house: true
-  target_senate: false
+  target_house: false
+  target_senate: true
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/iv_intro.mp3
   msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/iv_enter_zip.mp3
   msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
