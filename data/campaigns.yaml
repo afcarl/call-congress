@@ -1215,9 +1215,9 @@
     - 218-729-2044
     - 612-999-1433
     - 262-725-0171
-  target_house: false
+  target_house: true
   target_senate: false
-  target_house_first: false
+  target_house_first: true
   fftf_log_extra_data: true
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/sneak_attack_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
@@ -1228,110 +1228,75 @@
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   randomize_order: true
   extra_last_calls:
-    - name: Ander Crenshaw
-      number: 202-225-2501
-    - name: Tom Graves
-      number: (202) 225-5211
-    - name: Kevin Yoder
-      number: (202) 225-2865
-    - name: Steve Womack
-      number: (202) 225-4301
-    - name: Jaime Herrera Beutler
-      number: (202) 225-3536
-    - name: Mark Amodei
-      number: (202) 225-6155
-    - name: Scott Rigell
-      number: (202) 225-4215
-    - name: José Serrano
-      number: (202) 225-4361
-    - name: Mike Quigley
-      number: (202) 225-4061
-    - name: Chaka Fattah
-      number: 202-225-4001
-    - name: Sanford Bishop
-      number: 202-225-3631
-    - name: Nita Lowey
-      number: (202) 225-6506
-    - name: Marcy Kaptur
-      number: (202) 225-4146
-    - name: Pete Visclosky
-      number: (202) 225-2461
-    - name: Rosa DeLauro
-      number: (202) 225-3661
-    - name: David Price
-      number: (202) 225-1784
-    - name: Lucille Roybal-Allard
-      number: (202) 225-1766
-    - name: Sam Farr
-      number: (202) 225-2861
-    - name: Barbara Lee
-      number: (202) 225-2661
-    - name: Adam Schiff
-      number: (202) 225-4176
-    - name: Mike Honda
-      number: (202) 225-2631
-    - name: Betty McCollum
-      number: (202) 225-6631
-    - name: Steve Israel
-      number: (202) 225-3335
-    - name: Tim Ryan
-      number: (202) 225-5261
-    - name: C.A. Dutch Ruppersberger
+    - name: Linda Sanchez
+      number: 202-225-6676
+    - name: Joaquin Castro
+      number: 202-225-3236
+    - name: Rubén Hinojosa
+      number: 202-225-2531
+    - name: Filemon Vela
+      number: 202-225-9901
+    - name: Tony Cárdenas
+      number: 202-225-6131
+    - name: Jim Costa
+      number: 202-225-3341
+    - name: Jared Polis
+      number: 202-225-2161
+    - name: Yvette Clarke
+      number: 202-225-6231
+    - name: Dutch Ruppersberger
       number: 202-225-3061
-    - name: Debbie Wasserman Schultz
-      number: 202-225-7931
-    - name: Henry Cuellar
-      number: 202-225-1640
-    - name: Chellie Pingree
-      number: (202) 225-6116
-    - name: Mike Quigley
-      number: (202) 225-4061
     - name: Derek Kilmer
       number: 202-225-5916
-    - name: Harold Rogers
-      number: (202) 225-4601
-    - name: Rodney P. Frelinghuysen
-      number: (202) 225-5034
-    - name: Robert B. Aderholt
-      number: (202) 225-4876
-    - name: Kay Granger
-      number: (202) 225-5071
-    - name: Michael K. Simpson
-      number: (202) 225-5531
-    - name: John Abney Culberson
-      number: (202) 225-2571
-    - name: John R. Carter
-      number: (202) 225-3864
-    - name: Ken Calvert
-      number: (202) 225-1986
-    - name: Tom Cole
-      number: (202) 225-6165
-    - name: Mario Diaz-Balart
-      number: (202) 225-4211
-    - name: Charles W. Dent
-      number: 202-225-6411
-    - name: Jeff Fortenberry
-      number: (202) 225-4806
-    - name: Tom Rooney
-      number: (202) 225-5792
-    - name: Chuck Fleischmann
-      number: (202) 225-3271
-    - name: David Joyce
-      number: (202) 225-5731
-    - name: David Valadao
-      number: 202-225-4695
-    - name: Andy Harris
-      number: 202-225-5311
-    - name: Martha Roby
-      number: (202) 225-2901
-    - name: Chris Stewart
-      number: 202-225-9730
-    - name: David Jolly
-      number: (202) 225-5961
-    - name: David Young
-      number: (202) 225-5476
-    - name: Evan Jenkins
-      number: (202) 225-3452
-    - name: Steven Palazzo
-      number: (202) 225-5772
+    - name: Ben Ray Luján
+      number: 202-225-6190
+    - name: Andre Carson
+      number: 202-225-4011
+    - name: Ann Kirkpatrick
+      number: 202-225-3361
+    - name: Elijah E. Cummings
+      number: 202-225-4741
+    - name: Joe Crowley
+      number: 202-225-3965
+    - name: Marcia Fudge
+      number: 202-225-7032
+    - name: Robert Brady
+      number: 202-225-4731
+    - name: Al Green
+      number: 202-225-7508
+    - name: Eddie Bernice Johnson
+      number: 202-225-8885
+    - name: Rick Larsen
+      number: 202-225-2605
+    - name: G.K. Butterfield
+      number: 202-225-3101
+    - name: Henry Cuellar
+      number: 202-225-1640
+    - name: Alcee L. Hastings
+      number: 202-225-1313
+    - name: Corrine Brown
+      number: 202-225-0123
+    - name: Lacy Clay
+      number: 202-225-2406
+    - name: Gregory W. Meeks
+      number: 202-225-3461
+    - name: Bobby L. Rush
+      number: 202-225-4372
+    - name: Bennie Thompson
+      number: 202-225-5876
+    - name: Marc Veasey
+      number: 202-225-9897
+    - name: David Scott
+      number: 202-225-2939
+    - name: Loretta Sanchez
+      number: 202-225-2965
+    - name: Albio Sires
+      number: 202-225-7919
+    - name: Sanford Bishop
+      number: 202-225-3631
+    - name: Scott Peters
+      number: 202-225-0508
+    - name: Kurt Schrader
+      number: 202-225-5711
+    
   number_of_extra_last_calls: 8
