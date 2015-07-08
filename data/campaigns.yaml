@@ -307,7 +307,7 @@
       number: 202-418-0898
     - name: Tom Wheeler
       number: 202-418-1000
-  
+
 - id: fcc-blanket
   numbers:
     - 650-716-1243
@@ -801,7 +801,7 @@
     # https://docs.google.com/a/levinger.net/spreadsheets/d/1Jsxllae2408fWPgnfLWvFU105jlgUTFtAgo4MTLokE0/edit#gid=0
     # neg only, as of 3/13
 
-    # House Oversight Committee (emails/calls out starting 3/12)                                     
+    # House Oversight Committee (emails/calls out starting 3/12)
     - A000367 # Rep Justin Amash, 202-225-3831
     - B001294 # Rep Rod Blum, 202-225-2911
     - B001297 # Rep Ken Buck, 202-225-4676
@@ -1000,7 +1000,7 @@
   msg_final_thanks: http://tfrce.s3.amazonaws.com/housefasttrack/msg_final_thanks.mp3
 
 - id: stop-fast-track-senate
-  numbers: 
+  numbers:
     - 650-716-1243
     - 205-683-2590
     - 480-405-0187
@@ -1298,5 +1298,103 @@
       number: 202-225-0508
     - name: Kurt Schrader
       number: 202-225-5711
-    
+
+  number_of_extra_last_calls: 8
+
+- id: sneak-attack-2
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: true
+  target_senate: false
+  target_house_first: true
+  fftf_log_extra_data: true
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/sneak_attack_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/sneak_attack_connecting_2.mp3
+  msg_rep_intro: Connecting you to {{name}}.
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  randomize_order: true
+  extra_last_calls:
+    - name: Linda Sanchez
+      number: 202-225-6676
+    - name: Joaquin Castro
+      number: 202-225-3236
+    - name: Rubén Hinojosa
+      number: 202-225-2531
+    - name: Filemon Vela
+      number: 202-225-9901
+    - name: Tony Cárdenas
+      number: 202-225-6131
+    - name: Jim Costa
+      number: 202-225-3341
+    - name: Jared Polis
+      number: 202-225-2161
+    - name: Yvette Clarke
+      number: 202-225-6231
+    - name: Dutch Ruppersberger
+      number: 202-225-3061
+    - name: Derek Kilmer
+      number: 202-225-5916
+    - name: Ben Ray Luján
+      number: 202-225-6190
+    - name: Andre Carson
+      number: 202-225-4011
+    - name: Ann Kirkpatrick
+      number: 202-225-3361
+    - name: Elijah E. Cummings
+      number: 202-225-4741
+    - name: Joe Crowley
+      number: 202-225-3965
+    - name: Marcia Fudge
+      number: 202-225-7032
+    - name: Robert Brady
+      number: 202-225-4731
+    - name: Al Green
+      number: 202-225-7508
+    - name: Eddie Bernice Johnson
+      number: 202-225-8885
+    - name: Rick Larsen
+      number: 202-225-2605
+    - name: G.K. Butterfield
+      number: 202-225-3101
+    - name: Henry Cuellar
+      number: 202-225-1640
+    - name: Alcee L. Hastings
+      number: 202-225-1313
+    - name: Corrine Brown
+      number: 202-225-0123
+    - name: Lacy Clay
+      number: 202-225-2406
+    - name: Gregory W. Meeks
+      number: 202-225-3461
+    - name: Bobby L. Rush
+      number: 202-225-4372
+    - name: Bennie Thompson
+      number: 202-225-5876
+    - name: Marc Veasey
+      number: 202-225-9897
+    - name: David Scott
+      number: 202-225-2939
+    - name: Loretta Sanchez
+      number: 202-225-2965
+    - name: Albio Sires
+      number: 202-225-7919
+    - name: Sanford Bishop
+      number: 202-225-3631
+    - name: Scott Peters
+      number: 202-225-0508
+    - name: Kurt Schrader
+      number: 202-225-5711
+
   number_of_extra_last_calls: 8
