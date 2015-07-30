@@ -1313,89 +1313,48 @@
     - 218-729-2044
     - 612-999-1433
     - 262-725-0171
-  target_house: true
-  target_senate: false
+  target_house: false
+  target_senate: true
   target_house_first: true
   fftf_log_extra_data: true
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/sneak_attack_intro.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/generic_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
-  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
-  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/sneak_attack_connecting_2.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/generic_ask_zip2.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/generic_invalid_zip.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/nn_connecting.mp3
   msg_rep_intro: Connecting you to {{name}}.
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   randomize_order: true
   extra_last_calls:
-    - name: Linda Sanchez
-      number: 202-225-6676
-    - name: Joaquin Castro
-      number: 202-225-3236
-    - name: Rubén Hinojosa
-      number: 202-225-2531
-    - name: Filemon Vela
-      number: 202-225-9901
-    - name: Tony Cárdenas
-      number: 202-225-6131
-    - name: Jim Costa
-      number: 202-225-3341
-    - name: Jared Polis
-      number: 202-225-2161
-    - name: Yvette Clarke
-      number: 202-225-6231
-    - name: Dutch Ruppersberger
-      number: 202-225-3061
-    - name: Derek Kilmer
-      number: 202-225-5916
-    - name: Ben Ray Luján
-      number: 202-225-6190
-    - name: Andre Carson
-      number: 202-225-4011
-    - name: Ann Kirkpatrick
-      number: 202-225-3361
-    - name: Elijah E. Cummings
-      number: 202-225-4741
-    - name: Joe Crowley
-      number: 202-225-3965
-    - name: Marcia Fudge
-      number: 202-225-7032
-    - name: Robert Brady
-      number: 202-225-4731
-    - name: Al Green
-      number: 202-225-7508
-    - name: Eddie Bernice Johnson
-      number: 202-225-8885
-    - name: Rick Larsen
-      number: 202-225-2605
-    - name: G.K. Butterfield
-      number: 202-225-3101
-    - name: Henry Cuellar
-      number: 202-225-1640
-    - name: Alcee L. Hastings
-      number: 202-225-1313
-    - name: Corrine Brown
-      number: 202-225-0123
-    - name: Lacy Clay
-      number: 202-225-2406
-    - name: Gregory W. Meeks
-      number: 202-225-3461
-    - name: Bobby L. Rush
-      number: 202-225-4372
-    - name: Bennie Thompson
-      number: 202-225-5876
-    - name: Marc Veasey
-      number: 202-225-9897
-    - name: David Scott
-      number: 202-225-2939
-    - name: Loretta Sanchez
-      number: 202-225-2965
-    - name: Albio Sires
-      number: 202-225-7919
-    - name: Sanford Bishop
-      number: 202-225-3631
-    - name: Scott Peters
-      number: 202-225-0508
-    - name: Kurt Schrader
-      number: 202-225-5711
+    - name: Christopher Coons
+      number: 202-224-5042
+    - name: Richard J. Durbin
+      number: 202-224-2152
+    - name: Barbara Mikulski
+      number: 202-224-4654
+    - name: Tammy Baldwin
+      number: 202-224-5653
+    - name: Dianne Feinstein
+      number: 202-224-3841
+    - name: Patrick Leahy
+      number: 202-224-4242
+    - name: Jeff Merkley
+      number: 202-224-3753
+    - name: Christopher Murphy
+      number: 202-224-4041
+    - name: Patty Murray
+      number: 202-224-2621
+    - name: Jack Reed
+      number: 202-224-4642
+    - name: Brian Schatz
+      number: 202-224-3934 
+    - name: Jeanne Shaheen
+      number: 202-224-2841
+    - name: Jon Tester
+      number: 202-224-2644
+    - name: Tom Udall
+      number: 202-224-6621
+    
 
   number_of_extra_last_calls: 8
 
