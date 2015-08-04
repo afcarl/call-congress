@@ -1374,9 +1374,9 @@
   target_senate: true
   target_house_first: false
   fftf_log_extra_data: true
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/cisa_intro.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/cisa_intro2.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
-  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/cisa_enter_zip.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/cisa_enter_zip2.mp3
   msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/cisa_invalid_zip.mp3
   msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/cisa_connecting.mp3
   msg_rep_intro: Connecting you to {{name}}.
