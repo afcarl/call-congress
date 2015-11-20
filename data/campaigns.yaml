@@ -1555,8 +1555,8 @@
     - 262-725-0171
   target_house: false
   target_senate: false
-  msg_intro: http://presidentobamaslegacy.org/audio/daily/msg_intro.mp3
-  msg_intro_confirm: http://presidentobamaslegacy.org/audio/daily/msg_intro_confirm.mp3
+  msg_intro: http://presidentobamaslegacy.org/audio/daily/silence.mp3
+  msg_intro_confirm: http://presidentobamaslegacy.org/audio/daily/msg_intro_combined.mp3
   msg_call_block_intro: http://presidentobamaslegacy.org/audio/daily/msg_call_block_intro.mp3
   msg_between_thanks: http://presidentobamaslegacy.org/audio/daily/msg_between_thanks.mp3
   msg_rep_intro: Now connecting you to {{name}}.
@@ -1684,8 +1684,8 @@
     - 262-725-0171
   target_house: false
   target_senate: false
-  msg_intro: http://presidentobamaslegacy.org/audio/daily/msg_intro2.mp3
-  msg_intro_confirm: http://presidentobamaslegacy.org/audio/daily/msg_intro_confirm2.mp3
+  msg_intro: http://presidentobamaslegacy.org/audio/daily/silence.mp3
+  msg_intro_confirm: http://presidentobamaslegacy.org/audio/daily/msg_intro_combined2.mp3
   msg_call_block_intro: http://presidentobamaslegacy.org/audio/daily/msg_call_block_intro.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: Thanks for making your voice heard
