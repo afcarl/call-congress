@@ -1313,9 +1313,9 @@
     - 218-729-2044
     - 612-999-1433
     - 262-725-0171
-  target_house: false
+  target_house: true
   target_senate: true
-  target_house_first: true
+  target_house_first: false
   fftf_log_extra_data: true
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/generic_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
@@ -1325,35 +1325,6 @@
   msg_rep_intro: Connecting you to {{name}}.
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   randomize_order: true
-  extra_last_calls:
-    - name: Christopher Coons
-      number: 202-224-5042
-    - name: Richard J. Durbin
-      number: 202-224-2152
-    - name: Barbara Mikulski
-      number: 202-224-4654
-    - name: Tammy Baldwin
-      number: 202-224-5653
-    - name: Dianne Feinstein
-      number: 202-224-3841
-    - name: Patrick Leahy
-      number: 202-224-4242
-    - name: Jeff Merkley
-      number: 202-224-3753
-    - name: Christopher Murphy
-      number: 202-224-4041
-    - name: Patty Murray
-      number: 202-224-2621
-    - name: Jack Reed
-      number: 202-224-4642
-    - name: Brian Schatz
-      number: 202-224-3934
-    - name: Jeanne Shaheen
-      number: 202-224-2841
-    - name: Jon Tester
-      number: 202-224-2644
-    - name: Tom Udall
-      number: 202-224-6621
 
 
   number_of_extra_last_calls: 8
