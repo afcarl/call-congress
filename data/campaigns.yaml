@@ -467,8 +467,6 @@
     - name: vice presidents office
       number: 202-456-7458
     - name: vice presidents office
-      number: 202-456-3460
-    - name: vice presidents office
       number: 202-456-2744
     - name: vice presidents office
       number: 202-456-1723
@@ -562,8 +560,6 @@
       number: 202-456-3241
     - name: vice presidents office
       number: 202-456-7458
-    - name: vice presidents office
-      number: 202-456-3460
     - name: vice presidents office
       number: 202-456-2744
     - name: vice presidents office
@@ -1617,8 +1613,6 @@
       number: 202-456-3241
     - name: Vice Presidents Office
       number: 202-456-7458
-    - name: Vice Presidents Office
-      number: 202-456-3460
     - name: Senior Advisor to the Vice President
       number: 202-456-2744
     - name: Vice President Office
@@ -1746,8 +1740,6 @@
       number: 202-456-3241
     - name: Vice Presidents Office
       number: 202-456-7458
-    - name: Vice Presidents Office
-      number: 202-456-3460
     - name: Senior Advisor to the Vice President
       number: 202-456-2744
     - name: Vice President Office
