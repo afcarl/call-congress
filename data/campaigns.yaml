@@ -1294,7 +1294,6 @@
       number: 202-225-0508
     - name: Kurt Schrader
       number: 202-225-5711
-
   number_of_extra_last_calls: 8
 
 - id: sneak-attack-2
@@ -1760,3 +1759,58 @@
       number: 202-456-1111
     - name: White House Switchboard
       number: 202-456-1414
+
+- id: sneak-attack-3
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: false
+  target_senate: false
+  target_house_first: false
+  fftf_log_extra_data: true
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/sneak_attack_3_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/sneak_attack_3_call_block_intro.mp3
+  msg_rep_intro: Connecting you to {{name}}.
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  randomize_order: true
+  number_of_extra_first_calls: 2
+  extra_first_calls:
+    - name: White House Line 1
+      number: 202-456-1414
+    - name: Senator Harry Reid
+      number: 202-224-3542
+  number_of_extra_last_calls: 2
+  extra_last_calls:
+    - name: Senator Chuck Schumer
+      number: 202-224-6542
+    - name: White House Line 2
+      number: 202-456-5400
+    - name: White House Line 3
+      number: 202-456-6238
+    - name: White House Line 4
+      number: 202-456-2580
+    - name: Office of Political Affairs
+      number: 202-456-6257
+    - name: Office of Legislative Affairs
+      number: 202-456-2230
+    - name: Office of Administration
+      number: 202-456-2861
+    - name: White House Line 5
+      number: 202-456-5594
+    - name: White House Line 6
+      number: 202-395-5084
+    - name: White House Line 7
+      number: 202-395-3080
+    - name: Senator Dick Durbin
+      number: 202-224-2152
