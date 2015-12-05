@@ -1784,13 +1784,15 @@
   msg_rep_intro: Connecting you to {{name}}.
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   randomize_order: true
-  number_of_extra_first_calls: 2
+  number_of_extra_first_calls: 3
   extra_first_calls:
     - name: White House Line 1
       number: 202-456-1414
     - name: Senator Harry Reid
       number: 202-224-3542
-  number_of_extra_last_calls: 2
+    - name: Senator Barb Mikulski
+      number: 202-224-4654
+  number_of_extra_last_calls: 5
   extra_last_calls:
     - name: Senator Chuck Schumer
       number: 202-224-6542
