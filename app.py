@@ -365,7 +365,10 @@ def incoming_call():
     if not params or not campaign:
         abort(404)
 
-    return intro_zip_gather(params, campaign)
+    if params['repIds']:
+        return connection()
+    else:
+        return intro_zip_gather(params, campaign)
 
 
 @app.route("/zip_parse", methods=call_methods)
