@@ -27,6 +27,7 @@ class Throttle():
 
         flag_number = 0
         flag_ip = 0
+        blacklist = 0
         is_whitelisted = 0
 
         hashed_ip_address = hashlib.sha256(ip_address).hexdigest()
@@ -49,7 +50,14 @@ class Throttle():
         if recent_ip_address[0] > 1:
             flag_ip = 1
 
-        if override == os.environ.get('THROTTLE_OVERRIDE_KEY'):
+        qry = "SELECT count(id) FROM _ms_call_blacklist WHERE phone_number=%s"
+        cur.execute(qry, (from_phone_number,))
+        is_blacklisted = cur.fetchone()
+
+        if is_blacklisted[0] > 0:
+            blacklist = 1
+
+        if override ==os.environ.get('THROTTLE_OVERRIDE_KEY') and not blacklist:
             flag_ip = 0
             flag_number = 0
             is_whitelisted = 1
@@ -59,11 +67,12 @@ class Throttle():
 
         cur.execute(("INSERT INTO _ms_call_throttle "
                      "      (campaign_id, from_phone_number, is_whitelisted, "
-                     "          ip_address, flag_number, flag_ip, create_date) "
+                     "       is_blacklisted, ip_address, flag_number, flag_ip, "
+                     "       create_date) "
                      "VALUES "
-                     "      (%s, %s, %s, %s, %s, %s, NOW())"),
-                    (campaign_id, from_phone_number, is_whitelisted, ip_address,
-                        flag_number, flag_ip))
+                     "      (%s, %s, %s, %s, %s, %s, %s, NOW())"),
+                    (campaign_id, from_phone_number, is_whitelisted, blacklist,
+                            ip_address, flag_number, flag_ip))
 
         conn.commit()
         cur.close()
@@ -75,6 +84,10 @@ class Throttle():
         elif flag_ip:
             print "THROTTLE TRIP! --- ip_address %s / %s" % \
                 (ip_address, recent_ip_address[0])
+            return True
+        elif blacklist:
+            print "THROTTLE TRIP! --- BLACKLISTED %s" % \
+                (from_phone_number,)
             return True
 
         return False
