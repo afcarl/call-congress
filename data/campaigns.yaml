@@ -2246,7 +2246,7 @@
   target_house: true
   target_senate: true
   target_house_first: true
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/nn-cisa-2-intro.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/nn-cisa-2-intro-2.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
   msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
   msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/nn-cisa-2-call-prompt.mp3
