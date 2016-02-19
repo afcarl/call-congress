@@ -2303,13 +2303,6 @@
   randomize_order: true
   number_of_extra_first_calls: 1
   extra_first_calls:
-    - name: FBI Legislative Affairs agent Jolene Chonko
-      number: 202-324-7167
-    - name: FBI Legislative Affairs agent Denise Coates
-      number: 202-324-0552
-    - name: FBI Legislative Affairs agent Christopher Dunham
-      number: 202-324-5134
-    - name: FBI Legislative Affairs agent Jonathan Givens
-      number: 202-324-6940
-    - name: FBI Legislative Affairs agent James Brenna
-      number: 202-324-9751
+    - name: Jeff Lyon
+      number: 650-906-5975
+    
