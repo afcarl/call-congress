@@ -1322,7 +1322,82 @@
   randomize_order: true
 
 
-  number_of_extra_last_calls: 8
+- id: sneak-attack-3
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: true
+  target_senate: true
+  target_house_first: true
+  fftf_log_extra_data: true
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/generic_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/generic_ask_zip2.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/generic_invalid_zip.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc-rate-regulation-connecting.mp3
+  msg_rep_intro: Connecting you to {{name}}.
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  randomize_order: false
+  number_of_extra_last_calls: 5
+  extra_last_calls:
+    - name: Paul D. Ryan, Speaker of the House
+      number: 202-225-0600
+    - name: Kevin McCarthy (California - 23) - Majority Leader
+      number: 202-225-4000
+    - name: Steve Scalise (Louisiana - 01) - Majority Whip
+      number: 202-225-3015
+    - name: Cathy McMorris Rodgers (Washington - 05) - Republican Conference Chair
+      number: 202-225-2006
+    - name: Luke Messer (Indiana - 06) - Republican Policy Committee Chair
+      number: 202-226-5539
+    - name: Fred Upton (Michigan - 06) - Chairman
+      number: 202-225-3761
+    - name: Greg Walden (Oregon - 02)
+      number: 202-225-6730
+    - name: Adam Kinzinger (Illinois - 16) - BILL SPONSOR
+      number: 202-225-3635
+    - name: Marsha Blackburn (Tennessee - 07) - Vice Chairman
+      number: 202-225-2811
+    - name: Leonard Lance (New Jersey - 07)
+      number: 202-225-5631
+    - name: Brett Guthrie (Kentucky - 02)
+      number: 202-225-3501
+    - name: Pete Olson (Texas - 22)
+      number: (202) 225-5951
+    - name: Mike Pompeo (Kansas - 04)
+      number: (202) 225-6216
+    - name: Gus Bilirakis (Florida - 12)
+      number: (202) 225-5755
+    - name: Bill Johnson (Ohio - 06)
+      number: (202) 225-5705
+    - name: Billy Long (Missouri - 07)
+      number: (202) 225-6536
+    - name: Renee Ellmers (North Carolina - 02)
+      number: (202) 225-4531
+    - name: Chris Collins (New York - 27)
+      number: 202-225-5265
+    - name: Kevin Cramer (North Dakota - 00)
+      number: 202-225-2611
+    - name: Joe Barton (Texas - 06) - Chairman Emeritus
+      number: (202) 225-2002
+    - name: John Shimkus (Illinois - 15)
+      number: (202) 225-5271
+    - name: Rick W. Allen (Georgia - 12)
+      number: (202) 225-2823
+    - name: Pete Sessions (Texas - 32)
+      number: 202.225.2231
+
+
+
+  
 
 - id: cisa-cloture-fax
   numbers:
@@ -1760,7 +1835,7 @@
     - name: White House Switchboard
       number: 202-456-1414
 
-- id: sneak-attack-3
+- id: sneak-attack-old
   numbers:
     - 385-244-2472
     - 920-363-4215
