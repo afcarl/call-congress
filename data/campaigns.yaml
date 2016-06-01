@@ -1143,24 +1143,17 @@
     - 612-999-1433
     - 262-725-0171
   target_house: true
-  target_senate: false
+  target_senate: true
   target_house_first: true
   fftf_log_extra_data: true
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/tpp_intro.mp3
-  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/tpp_enter_zip.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/tpp_intro2.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/tpp_enter_zip2.mp3
   msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/tpp_invalid_zip.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
   msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/tpp_connecting.mp3
   msg_rep_intro: Connecting you to {{name}}.
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   msg_final_thanks: http://battleforthenet.s3.amazonaws.com/audio/tpp_outro.mp3
-  extra_last_calls:
-    - name: Nancy Pelosi
-      number: 202-225-4965
-      intro: http://battleforthenet.s3.amazonaws.com/audio/pelosi.mp3
-  number_of_extra_last_calls: 1
-  extra_last_call_name: Steny Hoyer
-  extra_last_call_num: 2022254131
 
 - id: endsurveillance
   numbers:
