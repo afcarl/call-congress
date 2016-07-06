@@ -119,6 +119,9 @@ def parse_params(r):
 
         'ip_address': r.values.get('ip_address', None),
 
+        # optional values for Fight for the Future org tracking
+        'org': r.values.getlist('org'),
+
         # optional values for Fight for the Future Leaderboards
         # if present, these add extra logging functionality in call_complete
         'fftfCampaign': r.values.get('fftfCampaign'),

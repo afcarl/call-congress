@@ -88,6 +88,7 @@ class FFTFLeaderboard():
         ip = hashlib.sha256(request.values.get("ip_address", "")).hexdigest()
 
         user_phone = params.get('userPhone', None)
+        org = params.get('org', 'fftf')
 
         if not user_phone:
             user_phone = request.values.get('From', '+15555555555')[-10:]
@@ -98,7 +99,8 @@ class FFTFLeaderboard():
             'from_phone_number': string.replace(user_phone, "-", ""),
             'to_phone_number': string.replace(to_phone, "-", ""),
             'ip_address': ip,
-            'call_index': call_index
+            'call_index': call_index,
+            'org': org
         }
 
         if self.debug_mode:
