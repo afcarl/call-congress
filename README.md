@@ -128,7 +128,8 @@ To install locally and run in debug mode use:
 
     python app.py
     # for testing twilio, need internet-visible urls to do call handling
-    ngrok -subdomain="1cf55a5a" 5000
+    # cd to whatever folder you have ngrok's binary installed and run:
+    ./ngrok http -subdomain="1cf55a5a" 5000
 
 When the dev server is running, the demo front-end will be accessible at [http://localhost:5000/demo](http://localhost:5000/demo).
 
