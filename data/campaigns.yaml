@@ -2491,3 +2491,41 @@
   call_human_check: false
   fftf_log_extra_data: true
   randomize_order: true
+
+- id: ectr
+  numbers:
+    - 385-244-2472
+    - 920-363-4215
+    - 267-943-3537
+    - 985-222-2472
+    - 951-363-2877
+    - 424-324-5877
+    - 860-322-5544
+    - 571-290-2472
+    - 650-716-1243
+    - 205-683-2590
+    - 530-322-5666
+    - 818-918-2472
+    - 480-405-0187
+    - 201-877-5437
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: true
+  target_senate: true
+  target_house_first: true
+  msg_intro: http://presidentobamaslegacy.org/audio/daily/silence.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/ectr-intro.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/tpp_invalid_zip.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/ectr-connecting.mp3
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_final_thanks: Thanks for making your voice heard
+  call_human_check: false
+  fftf_log_extra_data: true
+  randomize_order: false

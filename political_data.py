@@ -175,6 +175,7 @@ class PoliticalData():
                         in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))]
             if self.debug_mode:
                 print "got %s sens" % sens
+            random.shuffle(sens)
             member_ids.extend(sens)
 
         if target_house:
@@ -189,6 +190,7 @@ class PoliticalData():
                        in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))]
             if self.debug_mode:
                 print "got %s sens" % sens
+            random.shuffle(sens)
             member_ids.extend(sens)
 
 
