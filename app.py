@@ -68,7 +68,7 @@ app.config.from_object('config.ConfigProduction')
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 sentry = Sentry(app)
 
-db.init_app(app)
+# db.init_app(app) # JL HACK ~ disable mysql
 
 # Optional Redis cache, for caching Google spreadsheet campaign overrides
 cache_handler = CacheHandler(app.config['REDIS_URL'])
@@ -547,7 +547,8 @@ def count():
 
     campaign = request.values.get('campaign', 'default')
 
-    return jsonify(campaign=campaign, count=call_count(campaign))
+    # return jsonify(campaign=campaign, count=call_count(campaign))
+    return jsonify('DISABLED') # JL HACK ~ disable mysql
 
 
 @cache.cached(timeout=60, key_prefix=make_cache_key)
@@ -567,23 +568,24 @@ def recent_calls():
     since = request.values.get('since', datetime.utcnow() - timedelta(days=1))
     limit = request.values.get('limit', 50)
 
-    calls = call_list(campaign, since, limit)
-    serialized_calls = []
-    if not calls:
-        return jsonify(campaign=campaign, calls=[], count=0)
-    for c in calls:
-        s = dict(timestamp = c.timestamp.isoformat(),
-                 number = '%s-%s-XXXX' % (c.areacode, c.exchange))
-        member = data.get_legislator_by_id(c.member_id)
-        if member:
-            s['member'] = dict(
-                            title=member['title'],
-                            firstname=member['firstname'],
-                            lastname=member['lastname']
-                        )
-        serialized_calls.append(s)
+    # calls = call_list(campaign, since, limit)
+    # serialized_calls = []
+    # if not calls:
+    #     return jsonify(campaign=campaign, calls=[], count=0)
+    # for c in calls:
+    #     s = dict(timestamp = c.timestamp.isoformat(),
+    #              number = '%s-%s-XXXX' % (c.areacode, c.exchange))
+    #     member = data.get_legislator_by_id(c.member_id)
+    #     if member:
+    #         s['member'] = dict(
+    #                         title=member['title'],
+    #                         firstname=member['firstname'],
+    #                         lastname=member['lastname']
+    #                     )
+    #     serialized_calls.append(s)
 
-    return jsonify(campaign=campaign, calls=serialized_calls, count=len(serialized_calls))
+    # return jsonify(campaign=campaign, calls=serialized_calls, count=len(serialized_calls))
+    return jsonify('DISABLED') # JL NOTE ~ disable db
 
 @app.route('/live')
 @requires_auth
@@ -598,10 +600,12 @@ def stats():
     password = request.values.get('password', None)
     campaign = request.values.get('campaign', 'default')
 
-    if password == app.config['SECRET_KEY']:
-        return jsonify(aggregate_stats(campaign))
-    else:
-        return jsonify(error="access denied")
+    # if password == app.config['SECRET_KEY']:
+    #     return jsonify(aggregate_stats(campaign))
+    # else:
+    #     return jsonify(error="access denied")
+
+    return jsonify(error="access denied")   # JL HACK ~ disable mysql
 
 
 if __name__ == '__main__':
