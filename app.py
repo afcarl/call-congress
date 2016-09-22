@@ -41,6 +41,7 @@ import pystache
 import twilio.twiml
 
 import urllib2
+import requests
 
 from flask import (abort, after_this_request, Flask, request, render_template,
                    url_for)
@@ -206,8 +207,8 @@ def make_calls(params, campaign):
 
     if selection == "1" and campaign.get('press_1_callback'):
 
-        url = pystache.render(campaign.get('press_1_callback'),
-            phone=params['userPhone'])
+        url = campaign.get('press_1_callback').replace("{phone}",
+                params['userPhone'])
         
         callback_response = get_external_url(url)
         print "--- EXTERNAL CALLBACK RESPONSE: %s" % callback_response
@@ -238,17 +239,22 @@ def make_calls(params, campaign):
 
     return str(resp)
 
-def get_external_url(url):
+def get_external_url(url_or_json):
     """
     Used to call an external URL callback, used for the press_1_callback or
     press_9_optout to issue some kind of remote web request around the call,
     typically used to schedule a recurring phone call at a later date, outside
     of this app.
     """
-    user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-    headers = { 'User-Agent' : user_agent }
-    request = urllib2.Request(url, '', headers)
-    response = urllib2.urlopen(request).read()
+    try:
+        data = json.loads(url_or_json)
+        r = requests.post(data["url"], json=data)
+        response = r.status_code
+    except:
+        user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+        headers = { 'User-Agent' : user_agent }
+        request = urllib2.Request(url_or_json, '', headers)
+        response = urllib2.urlopen(request).read()
     return response
 
 
@@ -423,7 +429,9 @@ def make_single_call():
         to_phone = special['n']                            # "n" is for "number"
         full_name = special['p']                       # "p" is for "politician"
 
-        if special.get('i'):                                # "i" is for "intro"
+        if full_name == 'SKIP':
+            pass
+        elif special.get('i'):                                # "i" is for "intro"
             play_or_say(resp, special.get('i'))
         else:
             office = special.get('o', '')                  # "o" is for "office"
@@ -455,10 +463,13 @@ def make_single_call():
         print u'DEBUG: Call #{}, {} ({}) from {} : make_single_call()'.format(i,
             full_name.encode('ascii', 'ignore'), to_phone, params['userPhone'])
 
-    resp.dial(to_phone, callerId=params['userPhone'],
-              timeLimit=app.config['TW_TIME_LIMIT'],
-              timeout=app.config['TW_TIMEOUT'], hangupOnStar=True,
-              action=url_for('call_complete', **params))
+    if not full_name == "SKIP":
+        resp.dial(to_phone, callerId=params['userPhone'],
+                  timeLimit=app.config['TW_TIME_LIMIT'],
+                  timeout=app.config['TW_TIMEOUT'], hangupOnStar=True,
+                  action=url_for('call_complete', **params))
+    else:
+        resp.redirect(url_for('call_complete', **params))
 
     return str(resp)
 

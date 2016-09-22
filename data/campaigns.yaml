@@ -2567,3 +2567,46 @@
   call_human_check: false
   fftf_log_extra_data: true
   randomize_order: false
+
+- id: fcc-blanket44
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+
+    - 262-725-0171
+  target_house: false
+  target_senate: false
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro_new_2.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_2.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_call_block_intro_new_2.mp3
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_final_thanks: k thanks bye
+  msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_thanks.mp3
+  press_1_callback: https://queue.fightforthefuture.org/schedule_phone_call?phone_number={{phone}}&campaign_id=fcc-blanket-recurring
+  call_human_check: false
+  fftf_log_extra_data: true
+
+
+- id: hellovote
+  numbers:
+    - 844-344-3556
+  target_house: false
+  target_senate: false
+  target_house_first: false
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/silence.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/hellovote-intro-long.mp3
+  msg_ask_zip: http://presidentobamaslegacy.org/audio/daily/silence.mp3
+  msg_call_block_intro: http://presidentobamaslegacy.org/audio/daily/silence.mp3
+  msg_between_thanks: http://presidentobamaslegacy.org/audio/daily/silence.mp3
+  msg_rep_intro: http://presidentobamaslegacy.org/audio/daily/silence.mp3
+  msg_final_thanks: http://presidentobamaslegacy.org/audio/daily/silence.mp3
+  msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/hellovote-msg-opted-in.mp3
+  press_1_callback: '{"url":"https://votebot-api.herokuapp.com/conversations","recipients":[{"username":"{phone}"}],"type":"web","partner":"fftf"}'
+  call_human_check: false
+  fftf_log_extra_data: false
+  randomize_order: true
+  number_of_extra_first_calls: 11
+  extra_first_calls:
+    - name: 'SKIP'
+      number: '000'
