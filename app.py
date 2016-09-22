@@ -110,7 +110,7 @@ def full_url_for(route, **kwds):
 def parse_params(r):
 
     params = {
-        'userPhone': r.values.get('userPhone', r.values.get('To')),
+        'userPhone': r.values.get('userPhone', r.values.get('From')),
         'campaignId': r.values.get('campaignId', 'default'),
         'zipcode': r.values.get('zipcode', None),
         'repIds': r.values.getlist('repIds'),
@@ -206,9 +206,6 @@ def make_calls(params, campaign):
     selection = request.values.get('Digits', '')
 
     if selection == "1" and campaign.get('press_1_callback'):
-
-        print "PARAMS:"
-        print params
 
         url = campaign.get('press_1_callback').replace("{phone}",
                 params['userPhone'])
