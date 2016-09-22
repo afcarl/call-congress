@@ -207,6 +207,9 @@ def make_calls(params, campaign):
 
     if selection == "1" and campaign.get('press_1_callback'):
 
+        print "PARAMS:"
+        print params
+
         url = campaign.get('press_1_callback').replace("{phone}",
                 params['userPhone'])
         
