@@ -1415,7 +1415,7 @@
 
 
 
-  
+
 
 - id: cisa-cloture-fax
   numbers:
@@ -2649,3 +2649,110 @@
   call_human_check: false
   fftf_log_extra_data: true
   randomize_order: false
+
+
+- id: battleforthenet-2017
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: true
+  target_senate: true
+  target_house_first: true
+  msg_intro: https://s3.amazonaws.com/battleforthenet/audio/2017_intro.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/msg_ask_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/msg_invalid_zip.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/msg_call_block_intro.mp3
+  msg_rep_intro: We're now connecting you to {{name}}. Press star once you're done.
+  msg_between_thanks: http://tfrce.s3.amazonaws.com/trolling-effects/msg_between_thanks.mp3
+  msg_final_thanks: http://battleforthenet.s3.amazonaws.com/audio/msg_final_thanks.mp3
+  randomize_order: true
+  skip_star_confirm: true
+  call_human_check: false
+  only_call_1_rep: false
+  extra_last_calls:
+    - name: FCC Chairman Ajit Pai
+      number: 202-418-1000
+    - name: FCC Chairman Ajit Pai
+      number: 202-418-1000
+    - name: FCC Chairman Ajit Pai
+      number: 202-418-1000
+    - name: FCC Chairman Ajit Pai
+      number: 202-418-1000
+    - name: FCC Commissioner Michael O'Rielly
+      number: 202-418-2300
+    - name: FCC Commissioner Michael O'Rielly
+      number: 202-418-2300
+    - name: FCC Commissioner Michael O'Rielly
+      number: 202-418-2300
+    - name: FCC Commissioner Michael O'Rielly
+      number: 202-418-2300
+    - name: House Speaker Paul Ryan
+      number: 202-225-3031
+    - name: House Speaker Paul Ryan
+      number: 202-225-3031
+    - name: House Speaker Paul Ryan
+      number: 202-225-3031
+    - name: House Speaker Paul Ryan
+      number: 202-225-3031
+    - name: Senator Mitch McConnell
+      number: 202-224-2541
+    - name: Senator Mitch McConnell
+      number: 202-224-2541
+    - name: Senator Mitch McConnell
+      number: 202-224-2541
+    - name: Senator Mitch McConnell
+      number: 202-224-2541
+    - name: Senator John Thune
+      number: 202-224-2321
+    - name: Senator John Thune
+      number: 202-224-2321
+    - name: Senator John Thune
+      number: 202-224-2321
+    - name: Senator John Thune
+      number: 202-224-2321
+    - name: Senator John Cornyn
+      number: 202-224-2934
+    - name: Senator John Cornyn
+      number: 202-224-2934
+    - name: Representative Kevin McCarthy
+      number: 202-225-4000
+    - name: Representative Kevin McCarthy
+      number: 202-225-4000
+    - name: Representative Steve Scalise
+      number: 202-225-3015
+    - name: Representative Cathy McMorris Rodgers
+      number: 202-225-2006
+    - name: Representative Luke Messer
+      number: 202-226-5539
+    - name: Representative Greg Walden
+      number: 202-225-6730
+    - name: Representative Greg Walden
+      number: 202-225-6730
+    - name: Representative Joe Barton
+      number: (202) 225-2002
+    - name: Representative Joe Barton
+      number: (202) 225-2002
+    - name: Representative Marsha Blackburn
+      number: 202-225-2811
+    - name: Representative Marsha Blackburn
+      number: 202-225-2811
+    - name: Representative Marsha Blackburn
+      number: 202-225-2811
+    - name: Representative Marsha Blackburn
+      number: 202-225-2811
+    - name: Senator Roger Wicker
+      number: 202-224-6253
+    - name: Senator Roger Wicker
+      number: 202-224-6253
+    - name: Senator Roger Wicker
+      number: 202-224-6253
+    - name: Senator Roger Wicker
+      number: 202-224-6253
