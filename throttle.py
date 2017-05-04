@@ -6,7 +6,7 @@ class Throttle():
 
     def __init__(self):
 
-        url = os.environ.get('DATABASE_URL')
+        url = os.environ.get('HEROKU_POSTGRESQL_AMBER_URL')
         self.conn = psycopg2.connect(url)
 
     def throttle(self, campaign_id, from_phone_number, ip_address, override):
