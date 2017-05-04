@@ -58,7 +58,7 @@ class FlaskrTestCase(unittest.TestCase):
         assert(gparams['numDigits'] == "5")
         # and should redirect to handler
         assert('/zip_parse' in gparams['action'])
-        
+
     def assert_has_rep_intro(self, node, campaign):
         msg = campaign['msg_rep_intro'].split('{')[0]
         assert(node.tag == 'Say' and node.text.startswith(msg))
@@ -69,33 +69,33 @@ class FlaskrTestCase(unittest.TestCase):
     def test_location_lookup(self):
         campaign = dict(target_house=True, target_senate=True)
         # San Francisco
-        member_ids = locate_member_ids('94110', campaign, 
+        member_ids = locate_member_ids('94110', campaign,
             self.districts, self.legislators)
         assert(len(member_ids) == 3)
-        assert('Pelosi' in self.legislators.ix[member_ids].lastname.tolist())
-        
+        assert('Pelosi' in self.legislators.ix[member_ids].last_name.tolist())
+
         # San Francisco - just senate
-        senate_ids = locate_member_ids('94110', 
+        senate_ids = locate_member_ids('94110',
             dict(target_senate=True, target_house=False),
             self.districts, self.legislators
             )
         assert(len(senate_ids) == 2)
 
         # Seattle
-        member_ids = locate_member_ids('98112', campaign, 
+        member_ids = locate_member_ids('98112', campaign,
             self.districts, self.legislators)
         # the 98112 zipcode contains two districts - thus 2 House members
         assert(len(member_ids) == 4)
-    
-    
+
+
 
     def test_incoming_call(self):
         '''test incoming call - asks for zipcode'''
         params = dict(campaignId='default')
         req = self.app.post(url_for('incoming_call', **params))
         self.assert_zip_ask(req, params)
-        
-        
+
+
     def test_zip_ask(self):
         '''
         test with no repId parameter
@@ -108,28 +108,28 @@ class FlaskrTestCase(unittest.TestCase):
         url, qparams = self.parse_url(
             dict(tree.find('Gather').items())['action'])
         assert(url.path == '/zip_parse')
-        
+
         zipcode = '94110'
         tree = self.post_tree(url.geturl() + "&Digits={}".format(zipcode))
         assert(tree[0].tag == 'Say') # call block intro
         url, qparams = self.parse_url(tree[1].text)
         assert(qparams['userPhone'] == params['userPhone'])
         assert(qparams['zipcode'] == zipcode)
-        
-    
+
+
     def test_zip_given(self):
         campaign = self.campaigns['default']
-        params = dict(zipcode='95110', 
+        params = dict(zipcode='95110',
             campaignId='default', userPhone='1234567890')
         tree = self.post_tree('connection', **params)
         assert(campaign['msg_intro'] == tree[0].text)
         assert(tree.find('Gather') is None)
 
-    
+
     def test_making_single_call(self):
         campaign = self.campaigns['default']
         params = dict(self.example_params)
-        
+
         # test with connection, given repIds
         req = self.app.post(url_for('connection', **params))
         tree = lxml.etree.fromstring(req.data)
@@ -141,7 +141,7 @@ class FlaskrTestCase(unittest.TestCase):
         assert(url.path == '/make_single_call')
         assert(qparams['call_index'] == '0')
         assert([qparams['repIds']] == params['repIds'])
-        
+
         # if we follow that redirect to make a call
         req = self.app.post(url.geturl())
         tree = lxml.etree.fromstring(req.data)
@@ -156,7 +156,7 @@ class FlaskrTestCase(unittest.TestCase):
         assert(url.path == '/call_complete')
         assert(qparams['call_index'] == '0')
         assert([qparams['repIds']] == params['repIds'])
-        
+
         # on completion of that call
         # (assume that it completed successfully and lasted 2min)
         qparams.update(dict(
@@ -167,7 +167,7 @@ class FlaskrTestCase(unittest.TestCase):
         # there was only one rep - so just final thanks
         assert(len(tree) == 1 and tree[0].tag == 'Say' \
             and tree[0].text == campaign['msg_final_thanks'])
-        
+
         # and ensure that one call got logged to the db
         call = models.Call.query.first()
         assert(call.areacode == '415')
@@ -189,7 +189,7 @@ class FlaskrTestCase(unittest.TestCase):
         url, qparams = self.parse_url(tree.find('Redirect').text)
         assert(url.path == '/make_single_call')
         assert([qparams['repIds']] == campaign['repIds'])
-        
+
 
     def test_multi_calls(self):
         params = dict(self.example_params)
@@ -198,30 +198,30 @@ class FlaskrTestCase(unittest.TestCase):
         params['repIds'].append(id_boxer)
         # connect
         tree = self.post_tree('connection', **params)
-        
+
         for i, repId in enumerate(params['repIds']):
             url, qparams = self.parse_url(tree.find('Redirect').text)
             assert(url.path == '/make_single_call')
             assert(qparams['call_index'] == str(i))
             assert(qparams['repIds'] == params['repIds'])
-        
+
             # if we follow that redirect to make a call
             tree = self.post_tree(url.geturl())
             rep_phone = self.legislators.ix[repId, 'phone']
             assert(tree[1].tag == 'Dial' and tree[1].text == rep_phone)
             url, qparams = self.parse_url(dict(tree[1].items())['action'])
-            # dial action should go to call_complete 
+            # dial action should go to call_complete
             assert(url.path == '/call_complete')
             assert(qparams['call_index'] == str(i))
             assert(qparams['repIds'] == params['repIds'])
-        
+
             # assume call success
             tree = self.post_tree(url.path, **dict(
                 DialCallStatus='Success', DialCallDuration=60, **qparams))
-                
+
             call = models.Call.query.order_by(models.Call.timestamp).all()[-1]
             assert(call.member_id == repId)
-            
+
         else:
             assert(len(tree) == 1 and tree[0].tag == 'Say' \
                 and tree[0].text == campaign['msg_final_thanks'])
@@ -229,11 +229,11 @@ class FlaskrTestCase(unittest.TestCase):
 
 
     def test_unicode_name(self):
-        params = dict(self.example_params)        
+        params = dict(self.example_params)
         params['repIds'] = [id_cardenas]
         req = self.app.post(url_for('make_single_call', **params))
         assert("We're now connecting you to Tony C&#225;rdenas" in req.data)
-        
-        
+
+
 if __name__ == '__main__':
     unittest.main()

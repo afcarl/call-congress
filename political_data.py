@@ -34,14 +34,15 @@ class PoliticalData():
             reader = csv.DictReader(f)
 
             for legislator in reader:
-                if legislator['senate_class']:
+                if legislator['type'] == 'sen':
                     legislator['chamber'] = 'senate'
                 else:
                     legislator['chamber'] = 'house'
 
-                legislators.append(legislator)
+                # Turn 'rep' into 'Rep' and 'sen' into 'Sen'
+                legislator['title'] = legislator['type'].capitalize()
 
-        legislators = [l for l in legislators if l['in_office'] == '1']
+                legislators.append(legislator)
 
         districts = []
 
@@ -100,7 +101,7 @@ class PoliticalData():
 
     def format_special_call(self, name, number, office='', intro = None):
         return "S_%s" % json.dumps({
-            'p': name, 'n': number, 'i': intro, 
+            'p': name, 'n': number, 'i': intro,
             'o': office})
 
     def pick_lucky_recipients(self, list_so_far, campaign, which='first',num=1):
@@ -117,7 +118,7 @@ class PoliticalData():
                     continue
 
                 person = {
-                    "name": "%s %s"%(p.get('firstname'), p.get('lastname')),
+                    "name": "%s %s"%(p.get('first_name'), p.get('last_name')),
                     "number": p.get('phone')
                 }
 
@@ -201,7 +202,7 @@ class PoliticalData():
         # JL NOTE ~ Tony C=>A<=rdenas (C001097) has bad data, unicode warning
         if target_individual != None and target_individual != "":
             for l in self.legislators:
-                if l['lastname'] == target_individual and l['state'] == state:
+                if l['last_name'] == target_individual and l['state'] == state:
                     if l['bioguide_id'] in member_ids:
                             member_ids.remove(l['bioguide_id'])     # janky
                             member_ids.insert(0, l['bioguide_id'])  # lol
@@ -342,7 +343,7 @@ class PoliticalData():
                     'ascii', errors='backslashreplace'))
 
         return exclusions
-            
+
 
     def get_overrides(self, campaign):
 
@@ -359,9 +360,9 @@ class PoliticalData():
 
         spreadsheet_id = campaign.get('overrides_google_spreadsheet_id', None)
         spreadsheet_key = '%s-spreadsheet-data' % campaign.get('id')
-        
+
         overrides_data = self.cache_handler.get(spreadsheet_key, None)
-        
+
         if overrides_data == None:
             overrides = self.grab_overrides_from_google(spreadsheet_id)
             if self.debug_mode:
@@ -377,7 +378,7 @@ class PoliticalData():
             overrides = json.loads(overrides_data)
             if self.debug_mode:
                 print "GOT DATA FROM CACHE: %s" % str(overrides)
-        
+
         self.overrides_data[campaign.get('id')] = overrides
 
     def grab_overrides_from_google(self, spreadsheet_id):
@@ -392,7 +393,7 @@ class PoliticalData():
             return True if val == "TRUE" else False
 
         overrides = {}
-        
+
         for row in data['feed']['entry']:
 
             state = row['gsx$state']['$t']

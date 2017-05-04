@@ -209,7 +209,7 @@ def make_calls(params, campaign):
 
         url = campaign.get('press_1_callback').replace("{phone}",
                 params['userPhone'])
-        
+
         callback_response = get_external_url(url)
         print "--- EXTERNAL CALLBACK RESPONSE: %s" % callback_response
 
@@ -222,7 +222,7 @@ def make_calls(params, campaign):
 
         url = pystache.render(campaign.get('press_9_optout'),
             phone=params['userPhone'])
-        
+
         callback_response = get_external_url(url)
         print "--- OPT OUT RESPONSE: %s" % callback_response
 
@@ -303,7 +303,7 @@ def call_user():
             to=params['userPhone'],
             from_=random.choice(campaign['numbers']),
             url=full_url_for("connection", **params),
-            if_machine='Hangup' if campaign.get('call_human_check') else None, 
+            if_machine='Hangup' if campaign.get('call_human_check') else None,
             timeLimit=app.config['TW_TIME_LIMIT'],
             timeout=app.config['TW_TIMEOUT'],
             status_callback=full_url_for("call_complete_status", **params))
@@ -344,7 +344,7 @@ def connection():
 
         if campaign.get('skip_star_confirm'):
             resp.redirect(url_for('_make_calls', **params))
-            
+
             return str(resp)
 
         action = url_for("_make_calls", **params)
@@ -424,7 +424,7 @@ def make_single_call():
     params['call_index'] = i
 
     if "S_" in params['repIds'][i]:
-        
+
         special = json.loads(params['repIds'][i].replace("S_", ""))
         to_phone = special['n']                            # "n" is for "number"
         full_name = special['p']                       # "p" is for "politician"
@@ -445,7 +445,7 @@ def make_single_call():
         to_phone = member['phone']
         title = "Representative" if member['title'] == 'Rep' else 'Senator'
         full_name = unicode("{} {} {}".format(
-            title, member['firstname'], member['lastname']), 'utf8')
+            title, member['first_name'], member['last_name']), 'utf8')
         title = member['title']
         state = member['state']
 
@@ -590,8 +590,8 @@ def recent_calls():
     #     if member:
     #         s['member'] = dict(
     #                         title=member['title'],
-    #                         firstname=member['firstname'],
-    #                         lastname=member['lastname']
+    #                         first_name=member['first_name'],
+    #                         last_name=member['last_name']
     #                     )
     #     serialized_calls.append(s)
 
