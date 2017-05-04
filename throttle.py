@@ -6,13 +6,8 @@ class Throttle():
 
     def __init__(self):
 
-        db   = os.environ.get('MOTHERSHIP_POSTGRES_DB')
-        user = os.environ.get('MOTHERSHIP_POSTGRES_USER')
-        pswd = os.environ.get('MOTHERSHIP_POSTGRES_PASS')
-        host = os.environ.get('MOTHERSHIP_POSTGRES_HOST')
-        port = os.environ.get('MOTHERSHIP_POSTGRES_PORT')
-        self.conn = psycopg2.connect(database=db, user=user, password=pswd,
-            host=host, port=port)
+        url = os.environ.get('HEROKU_POSTGRESQL_AMBER_URL')
+        self.conn = psycopg2.connect(url)
 
     def throttle(self, campaign_id, from_phone_number, ip_address, override):
         """Records call info in the log"""

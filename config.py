@@ -19,7 +19,7 @@ class Config(object):
     TASKFORCE_KEY = os.environ.get('TASKFORCE_KEY')
     SUNLIGHTLABS_KEY = os.environ.get('SUNLIGHTLABS_KEY')
 
-    REDIS_URL = os.environ.get('REDISTOGO_URL') or None # JL NOTE ~ optional
+    REDIS_URL = os.environ.get('REDIS_URL') or None # JL NOTE ~ optional
 
     # limit on the length of the call
     TW_TIME_LIMIT = 60 * 20  # 4 minutes
@@ -42,7 +42,7 @@ class ConfigProduction(Config):
     SENTRY_DSN = os.environ.get('SENTRY_DSN')
 
     SQLALCHEMY_POOL_RECYCLE = 60 * 60  # 1 hour
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
     APPLICATION_ROOT = os.environ.get('APPLICATION_ROOT')
 
