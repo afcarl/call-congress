@@ -2666,7 +2666,7 @@
   target_house: true
   target_senate: true
   target_house_first: true
-  msg_intro: https://s3.amazonaws.com/battleforthenet/audio/2017_intro.mp3
+  msg_intro: https://s3.amazonaws.com/battleforthenet/audio/2017_laila_intro.mp3
   msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/msg_ask_zip.mp3
   msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/msg_invalid_zip.mp3
   msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/msg_call_block_intro.mp3
